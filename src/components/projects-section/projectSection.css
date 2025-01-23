@@ -1,0 +1,27 @@
+.project-view {
+  transform: perspective(75em) rotateY(-18deg);
+  box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+}
+
+#slanted {
+  transform: perspective(75em) rotateY(-18deg);
+}
+
+.custom-skew {
+  transform: perspective(75em) rotateY(30deg) rotateX(0deg) translateX(0);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1557683316-973673baf926?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 850px) {
+  .project-view {
+    transform: perspective(75em) rotateY(0deg);
+  }
+
+  .custom-skew {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+}
