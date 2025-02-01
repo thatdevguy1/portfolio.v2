@@ -32,7 +32,8 @@ const projects = {
       "Amplify",
       "Shadcn",
     ],
-    youtubeLink: "https://www.youtube.com/embed/7_pfrDaiZKU",
+    youtubeLink:
+      "https://www.youtube.com/embed/oc4UwcqTEH4?si=-mPAy2xcno43ICA8",
     githubLink: "https://github.com/thatdevguy1/CloudRoom",
     uri: "https://www.cloudroomapp.com",
   },
@@ -184,7 +185,7 @@ function ProjectsSection({ setSection, projectsRef }: ProjectsSectionProps) {
         )}
         <div className="flex flex-col justify-center items-center max-[850px]:h-[40vh] min-[850px]:w-[60vw] w-[100vw] lg:px-10">
           <motion.div
-            className="project-view border-0 min-[850px]:mr-10 rounded-md min-[850px]:h-[70%] lg:h-[75%] w-[95%] overflow-hidden relative"
+            className="project-view border-0 min-[850px]:mr-10 rounded-md min-[850px]:h-[80%] lg:h-[85%] w-[95%] overflow-hidden relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: hoveredProject ? 1 : 0 }}
             transition={{ duration: 0.3 }}
@@ -194,10 +195,10 @@ function ProjectsSection({ setSection, projectsRef }: ProjectsSectionProps) {
                 className=" self-center justify-self-center max-[850px]:h-[40vh] h-full w-full"
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/7_pfrDaiZKU"
+                src={selectedProject.youtubeLink}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 // @ts-ignore
-                allowfullscreen
+                allowFullscreen
               ></iframe>
             ) : (
               <>
