@@ -51,7 +51,8 @@ const projects = {
       "Socket.io",
       "Redux",
     ],
-    youtubeLink: "https://www.youtube.com/embed/7_pfrDaiZKU",
+    youtubeLink:
+      "https://www.youtube.com/embed/RefZeXL9gRY?si=AJ_ajfwg82sNzCD3",
     githubLink: "https://www.github.com/thatdevguy1/letsplay",
     uri: "",
   },
