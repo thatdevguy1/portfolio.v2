@@ -61,7 +61,8 @@ const projects = {
     description: "A platform that allows users to confirm they are ready.",
     imageUrl: "./imgs/readyuprooms.png",
     technologies: ["React", "Node", "MongoDB", "Express", "Socket.io"],
-    youtubeLink: "https://www.youtube.com/embed/7_pfrDaiZKU",
+    youtubeLink:
+      "https://www.youtube.com/embed/RefZeXL9gRY?si=AJ_ajfwg82sNzCD3",
     githubLink: "https://www.github.com/thatdevguy1/readyup",
     uri: "http://readyup-rooms.herokuapp.com/",
   },
@@ -141,6 +142,7 @@ function ProjectsSection({ setSection, projectsRef }: ProjectsSectionProps) {
           </motion.div>
         ) : (
           <motion.div
+            onMouseLeave={() => setHoveredProject("Projects")}
             key={2}
             className="flex min-[850px]:flex-col flex-row min-[850px]:justify-center justify-around min-[850px]:w-[40vw] w-[100vw] lg:p-20 sm:p-10 lg:pr-5 md:pr-15 pr-5"
             initial={{
@@ -214,7 +216,11 @@ function ProjectsSection({ setSection, projectsRef }: ProjectsSectionProps) {
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}
                   transition={{ duraction: 0.3 }}
-                  className="h-full w-full object-cover object-top"
+                  className={`h-full w-full ${
+                    hoveredProject === "Projects"
+                      ? "object-center"
+                      : "object-top"
+                  } object-cover`}
                 />
               </>
             )}

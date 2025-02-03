@@ -335,13 +335,13 @@ const TechSection = ({ setSection, techRef }: TechSectionProps) => {
                     <motion.div
                       initial={{
                         opacity: 0,
-                        translateX: 50,
+                        translateX: 120,
                       }}
                       whileInView={{
                         opacity: 1,
                         translateX: 0,
                         transition: {
-                          duration: 0.3,
+                          duration: 0.4,
                         },
                       }}
                       key={integration.id}
