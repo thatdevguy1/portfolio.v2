@@ -7,6 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ProjectDetailsProps {
   project: {
@@ -41,9 +47,25 @@ function ProjectDetails({ project, handleBack }: ProjectDetailsProps) {
         <Button className="mx-2" onClick={handleBack}>
           Back
         </Button>
-        <a href={project!.uri} target="_blank">
-          <Button className="mx-2">Visit Site</Button>
-        </a>
+        {project!.uri ? (
+          <a href={project!.uri} target="_blank">
+            <Button className="mx-2">Visit Site</Button>
+          </a>
+        ) : (
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button className="mx-2" disabled>
+                  Visit Site
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>This site is currently not deployed</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
+
         <a href={project!.githubLink} target="_blank">
           <Button className="mx-2">View Code</Button>
         </a>
