@@ -39,7 +39,8 @@ const projects = {
   },
   LetsPlay: {
     title: "LetsPlay",
-    description: "A platform that allows users to find and join sports events.",
+    description:
+      "A platform that allows users to find, create, and join events.",
     imageUrl: "./imgs/letsplay.png",
     technologies: [
       "React",
@@ -68,7 +69,8 @@ const projects = {
   },
   ClanImba: {
     title: "ClanImba",
-    description: "A platform that allows users to find and join gaming clans.",
+    description:
+      "A platform that allows users to chat with their blizzard friends.",
     imageUrl: "./imgs/clanimba.png",
     technologies: [
       "React",
